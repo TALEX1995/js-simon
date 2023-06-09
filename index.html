@@ -12,8 +12,12 @@
     <div class="d-flex flex-column align-items-center justify-content-center vh-100">
         <!-- Timer -->
         <div id="timer">30</div>
+
+        <!-- Play button -->
+        <button id="start-game" class="btn btn-primary my-3">Gioca</button>
+
         <!-- Random number -->
-        <div>
+        <div class="d-none">
             <ul class="d-flex">
                 <li>32</li>
                 <li>38</li>
@@ -22,8 +26,9 @@
                 <li>74</li>
             </ul>
         </div>
+
         <!-- Input for user number -->
-        <form id="number-input">
+        <form class="d-none" id="number-input">
             <p class="fs-2 text-center">Inserisci i numeri visti in precedenza</p>
             <label for="number-1">Numero 1:</label>
             <input id="number-1" type="number" min="1" max="100">
@@ -36,8 +41,9 @@
             <label for="number-5">Numero 5:</label>
             <input id="number-5" type="number" min="1" max="100">
         </form>
+        
         <!-- Result -->
-        <p id="result" class="m-4 fs-2"></p>
+        <p id="result" class="m-4 fs-2 d-none"></p>
 
     </div>
     
