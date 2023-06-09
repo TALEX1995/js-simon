@@ -59,5 +59,14 @@ startGame.addEventListener('click', () => {
 
     // Create random Number
     randomNumber = generateRandomNumber();
+    console.log(randomNumber)
     
+
+    // Create list item and insert into DOM
+    for (let i = 0; i < randomNumber.length; i++) {
+        const listItem = document.createElement('li');
+        listItem.innerText = randomNumber[i];
+        randomNumberList.appendChild(listItem);
+    }
+
 })
