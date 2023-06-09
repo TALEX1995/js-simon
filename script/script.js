@@ -7,7 +7,12 @@ const startGame = document.getElementById('start-game');
 const randomNumberList = document.getElementById('random-number-list');
 const numberInput = document.getElementById('number-input');
 const result = document.getElementById('result');
-
+const sendUserNumber = document.getElementById('send-user-number');
+const number1 = document.getElementById('number-1');
+const number2 = document.getElementById('number-2');
+const number3 = document.getElementById('number-3');
+const number4 = document.getElementById('number-4');
+const number5 = document.getElementById('number-5');
 
 // Function
 const generateRandomNumber = () => {
@@ -70,5 +75,18 @@ startGame.addEventListener('click', () => {
         listItem.innerText = randomNumber[i];
         randomNumberList.appendChild(listItem);
     }
-    
+})
+
+
+sendUserNumber.addEventListener('click', (event) => {
+    // Stop submit
+    event.preventDefault()
+
+
+    console.log(number1.value)
+    console.log(number2.value)
+    console.log(number3.value)
+    console.log(number4.value)
+    console.log(number5.value)
+
 })
