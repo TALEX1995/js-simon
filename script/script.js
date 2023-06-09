@@ -9,11 +9,6 @@ const numberInput = document.getElementById('number-input');
 const result = document.getElementById('result');
 
 
-
-// Variable for the Timing function
-let intervalCountdown;
-
-
 // Function
 const generateRandomNumber = () => {
 
@@ -35,13 +30,20 @@ const generateRandomNumber = () => {
 let randomNumber;
 
 
+// Variable for the Timing function
+let intervalCountdown;
 
 
 // Function click on the play button
 
 startGame.addEventListener('click', () => {
+    
+    // Restart
+    randomNumberList.innerHTML = ''
+    
     // Countdown timer
     let timerCountdown = 30
+
 
     // Timing function for the timer countdown
     intervalCountdown = setInterval (() => {
@@ -68,5 +70,5 @@ startGame.addEventListener('click', () => {
         listItem.innerText = randomNumber[i];
         randomNumberList.appendChild(listItem);
     }
-
+    
 })
