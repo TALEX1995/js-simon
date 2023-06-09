@@ -45,6 +45,7 @@ startGame.addEventListener('click', () => {
     
     // Restart
     randomNumberList.innerHTML = ''
+    numberInput.classList.add('d-none')
     
     // Countdown timer
     let timerCountdown = 30
@@ -81,7 +82,9 @@ startGame.addEventListener('click', () => {
 sendUserNumber.addEventListener('click', (event) => {
     // Stop submit
     event.preventDefault()
-
+    
+    // Show number
+    randomNumberList.classList.remove('d-none')
 
     console.log(number1.value)
     console.log(number2.value)
