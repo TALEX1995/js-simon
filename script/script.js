@@ -82,7 +82,7 @@ startGame.addEventListener('click', () => {
 sendUserNumber.addEventListener('click', (event) => {
     // Stop submit
     event.preventDefault()
-    
+
     // Show number
     randomNumberList.classList.remove('d-none')
 
@@ -92,4 +92,11 @@ sendUserNumber.addEventListener('click', (event) => {
     console.log(number4.value)
     console.log(number5.value)
 
+    // Disabled the input
+    number1.disabled = true
+    number2.disabled = true
+    number3.disabled = true
+    number4.disabled = true
+    number5.disabled = true
+    
 })
