@@ -14,20 +14,50 @@ const result = document.getElementById('result');
 let intervalCountdown;
 
 
+// Function
+const generateRandomNumber = () => {
+
+    let randomPcNumber = [];
+
+    while(randomPcNumber.length < 5) {
+        let randomNumber;
+        do {
+            randomNumber = Math.floor(Math.random() * 100) + 1;
+        } while (randomPcNumber.includes(randomNumber));
+        randomPcNumber.push(randomNumber);
+        
+    }
+    
+    return randomPcNumber;
+}
+
+// Random number Array
+let randomNumber;
+
+
+
 
 // Function click on the play button
 
 startGame.addEventListener('click', () => {
     // Countdown timer
     let timerCountdown = 30
+
     // Timing function for the timer countdown
     intervalCountdown = setInterval (() => {
         timerCountdown--,
         timer.innerText = timerCountdown;
         if (timerCountdown === 0) {
             clearInterval(intervalCountdown)
+            numberInput.classList.remove('d-none')
+            randomNumberList.classList.add('d-none')
         }
     }, 1000);
     
+    // Discover UL list
+    randomNumberList.classList.remove('d-none')
+
+    // Create random Number
+    randomNumber = generateRandomNumber();
     
 })
