@@ -45,7 +45,17 @@ startGame.addEventListener('click', () => {
     
     // Restart
     randomNumberList.innerHTML = ''
-    numberInput.classList.add('d-none')
+    numberInput.classList.add('d-none');
+    number1.disabled = false
+    number2.disabled = false
+    number3.disabled = false
+    number4.disabled = false
+    number5.disabled = false
+    number1.value = ''
+    number2.value = ''
+    number3.value = ''
+    number4.value = ''
+    number5.value = ''
     
     // Countdown timer
     let timerCountdown = 30
@@ -86,11 +96,6 @@ sendUserNumber.addEventListener('click', (event) => {
     // Show number
     randomNumberList.classList.remove('d-none')
 
-    console.log(number1.value)
-    console.log(number2.value)
-    console.log(number3.value)
-    console.log(number4.value)
-    console.log(number5.value)
 
     // Disabled the input
     number1.disabled = true
@@ -99,4 +104,19 @@ sendUserNumber.addEventListener('click', (event) => {
     number4.disabled = true
     number5.disabled = true
     
+    // Result
+    let resultPoint = 0;
+    
+    // Create Array with the user input value
+    const userNumberArray = [parseInt(number1.value), parseInt(number2.value), parseInt(number3.value), parseInt(number4.value), parseInt(number5.value)]
+    
+    // Cicle to see if the input user number are inside the random number Array
+    for (let i = 0; i < userNumberArray.length; i++) {
+        if(randomNumber.includes(userNumberArray[i])) {
+            resultPoint++
+        } 
+    }
+
+    // Insert result into DOM
+    result.innerText = `Hai totalizzato ${resultPoint} punti`
 })
