@@ -118,5 +118,10 @@ sendUserNumber.addEventListener('click', (event) => {
     }
 
     // Insert result into DOM
-    result.innerText = `Hai totalizzato ${resultPoint} punti`
+    if (resultPoint === 1) {
+        result.innerText = `Hai totalizzato ${resultPoint} punto`
+    } else {
+        result.innerText = `Hai totalizzato ${resultPoint} punti` 
+    }
+    
 })
