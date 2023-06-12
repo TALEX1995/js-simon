@@ -56,6 +56,7 @@ startGame.addEventListener('click', () => {
     number3.value = ''
     number4.value = ''
     number5.value = ''
+    result.innerText = ''
     
     // Countdown timer
     let timerCountdown = 30
