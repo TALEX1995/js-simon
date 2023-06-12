@@ -7,7 +7,6 @@ const startGame = document.getElementById('start-game');
 const randomNumberList = document.getElementById('random-number-list');
 const numberInput = document.getElementById('number-input');
 const result = document.getElementById('result');
-const sendUserNumber = document.getElementById('send-user-number');
 const number1 = document.getElementById('number-1');
 const number2 = document.getElementById('number-2');
 const number3 = document.getElementById('number-3');
@@ -90,7 +89,7 @@ startGame.addEventListener('click', () => {
 })
 
 
-sendUserNumber.addEventListener('click', (event) => {
+numberInput.addEventListener('submit', (event) => {
     // Stop submit
     event.preventDefault()
 
